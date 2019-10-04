@@ -1,8 +1,4 @@
 
-
-import unittest
-
-    
 def romanToInt( s: str) -> int:
     """
     Funcion que devuelve en enteros los numeros romanos
@@ -31,17 +27,3 @@ def romanToInt( s: str) -> int:
             suma += nums[v]    
     return suma
 
-
-
-class PruebasFunciones(unittest.TestCase):
-    
-    def test_romanToInt(self):
-        self.assertEqual(romanToInt("III"),3)
-        self.assertEqual(romanToInt("IV"),4)
-        self.assertEqual(romanToInt("IX"),9)
-        self.assertEqual(romanToInt("LVIII"),58)
-        self.assertEqual(romanToInt("MCMXCIV"),1994)    
-
-
-if __name__ == "__main__":
-    unittest.main()
