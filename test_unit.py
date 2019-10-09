@@ -6,8 +6,8 @@ Created on Fri Oct  4 15:39:12 2019
 """
 import unittest
 
-import romanos.num_romano as num_romano
-
+import utils.num_romano as num_romano
+import utils.remove_element as remove_element
 
 
 class PruebasFunciones(unittest.TestCase):
@@ -18,7 +18,14 @@ class PruebasFunciones(unittest.TestCase):
         self.assertEqual(num_romano.romanToInt("IV"),4)
         self.assertEqual(num_romano.romanToInt("IX"),9)
         self.assertEqual(num_romano.romanToInt("LVIII"),58)
-        self.assertEqual(num_romano.romanToInt("MCMXCIV"),1994)    
+        self.assertEqual(num_romano.romanToInt("MCMXCIV"),1994)   
+        
+    
+    def test_remove_element(self):
+        """Haciendo prueba para remover elementos"""
+        self.assertEqual(remove_element.removeElement([3,2,2,3], 2), 2)
+        self.assertEqual(remove_element.removeElement([0,1,2,2,3,0,4,2], 2), 5)
+        
 
 
 if __name__ == "__main__":
